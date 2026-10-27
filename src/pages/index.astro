@@ -1,0 +1,611 @@
+---
+import Layout from "../layouts/Layout.astro";
+import data from "../../datas.json";
+
+const statuses = [
+  { value: "Actif", label: "Persiste", className: "active" },
+  { value: "Instable", label: "En danger", className: "unstable" },
+  { value: "Inactif", label: "Perdu", className: "inactive" },
+];
+const indicators = data.criteres.flatMap((group) => group.sous_criteres);
+const affectedCount = indicators.filter(
+  (indicator) =>
+    indicator.statut === "Instable" || indicator.statut === "Inactif",
+).length;
+const affectedPercentage = indicators.length
+  ? Math.round((affectedCount / indicators.length) * 100)
+  : 0;
+const updatedAt = new Intl.DateTimeFormat("fr-FR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(new Date(`${data.derniere_mise_a_jour}T00:00:00Z`));
+---
+
+<Layout>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>
+        <span class="heading-text">France - État de la démocratie</span>
+      </h1>
+      <div class="overview">
+        <div class="scale-labels" aria-hidden="true">
+          <span>Démocratie</span>
+          <span>Régime autoritaire</span>
+        </div>
+        <div
+          class="democracy-meter"
+          role="meter"
+          aria-label="Part des sous-critères instables ou inactifs"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow={affectedPercentage}
+          aria-valuetext={`${affectedPercentage} % : ${affectedCount} sous-critères instables ou inactifs sur ${indicators.length}`}
+          title={`${affectedPercentage} % des sous-critères sont instables ou inactifs`}
+        >
+          <span style={{ width: `${affectedPercentage}%` }}></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <ul class="legend" aria-label="Légende des statuts" role="list">
+      {
+        statuses.map((status) => (
+          <li>
+            <span class:list={["dot", status.className]} aria-hidden="true" />
+            {status.label}
+          </li>
+        ))
+      }
+    </ul>
+    <div class="dashboard" id="criteria-dashboard">
+      <div
+        class="criteria-nav"
+        role="tablist"
+        aria-label="Critères démocratiques"
+        aria-orientation="vertical"
+      >
+        {
+          data.criteres.map((group, index) => (
+            <button
+              type="button"
+              class="criterion-tab"
+              role="tab"
+              id={`tab-${group.id}`}
+              aria-controls={`panel-${group.id}`}
+              aria-selected={index === 0 ? "true" : "false"}
+              tabindex={index === 0 ? 0 : -1}
+            >
+              <span class="criterion-title">{group.titre}</span>
+              <span class="group-distribution">
+                {group.sous_criteres.map((item) => (
+                  <span
+                    class:list={[
+                      "dot",
+                      statuses.find((status) => status.value === item.statut)
+                        ?.className,
+                    ]}
+                    role="img"
+                    aria-label={item.statut}
+                    title={item.statut}
+                  />
+                ))}
+              </span>
+            </button>
+          ))
+        }
+      </div>
+      <div class="criteria-content">
+        {
+          data.criteres.map((group, index) => (
+            <section
+              class="group"
+              id={`panel-${group.id}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${group.id}`}
+              tabindex="0"
+              hidden={index !== 0}
+            >
+              <header class="group-heading">
+                <h2 id={group.id}>{group.titre}</h2>
+              </header>
+              <div class="rows">
+                {group.sous_criteres.map((item) => (
+                  <details class="indicator">
+                    <summary>
+                      <span class="description">{item.description}</span>
+                      <span
+                        class:list={[
+                          "status",
+                          statuses.find(
+                            (status) => status.value === item.statut,
+                          )?.className,
+                        ]}
+                      >
+                        {statuses.find((status) => status.value === item.statut)
+                          ?.label ?? item.statut}
+                      </span>
+                      <span class="chevron" aria-hidden="true" />
+                    </summary>
+                    <div class="comment">
+                      <p>{item.comment || "Aucun commentaire disponible."}</p>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ))
+        }
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span
+        >Données au <time datetime={data.derniere_mise_a_jour}
+          >{
+            new Intl.DateTimeFormat("fr-FR", { timeZone: "UTC" }).format(
+              new Date(`${data.derniere_mise_a_jour}T00:00:00Z`),
+            )
+          }</time
+        ></span
+      >
+    </footer>
+  </main>
+</Layout>
+
+<script>
+  const dashboard = document.querySelector("#criteria-dashboard");
+  const tabs = Array.from(
+    dashboard?.querySelectorAll<HTMLButtonElement>('[role="tab"]') ?? [],
+  );
+  const panels = dashboard?.querySelectorAll<HTMLElement>('[role="tabpanel"]');
+
+  function selectCriterion(selectedTab: HTMLButtonElement) {
+    tabs.forEach((tab) => {
+      const selected = tab === selectedTab;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    panels?.forEach((panel) => {
+      panel.hidden = panel.id !== selectedTab.getAttribute("aria-controls");
+      panel.querySelectorAll("details").forEach((accordion) => {
+        accordion.open = false;
+      });
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectCriterion(tab));
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex: number;
+      switch (event.key) {
+        case "ArrowDown":
+          nextIndex = (index + 1) % tabs.length;
+          break;
+        case "ArrowUp":
+          nextIndex = (index - 1 + tabs.length) % tabs.length;
+          break;
+        case "Home":
+          nextIndex = 0;
+          break;
+        case "End":
+          nextIndex = tabs.length - 1;
+          break;
+        default:
+          return;
+      }
+      event.preventDefault();
+      const nextTab = tabs[nextIndex];
+      selectCriterion(nextTab);
+      nextTab.focus();
+    });
+  });
+</script>
+
+<style>
+  :global(:root) {
+    --ink: #243340;
+    --muted: #526477;
+    --date: #63758a;
+    --line: #cddae5;
+    --accent: #16236d;
+    --selected: #fff;
+    --hover: #f1f3f5;
+    --surface: #fff;
+    --green: #137545;
+    --orange: #a14b06;
+    --red: #cf3b3b;
+    --black: #000;
+  }
+  :global(body) {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--ink);
+    background: linear-gradient(135deg, #2e176e 0%, #1b66b3 100%);
+    background-attachment: fixed;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  :global(*) {
+    box-sizing: border-box;
+  }
+  :global(a:focus-visible),
+  .criterion-tab:focus-visible,
+  .group:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 3px 16px #294d6b0d;
+  }
+  .topbar-inner {
+    margin: auto;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(50%, 50%) auto;
+    align-items: center;
+    gap: 16px;
+  }
+  main {
+    max-width: 1600px;
+    margin: auto;
+    padding: 24px 20px calc(96px + env(safe-area-inset-bottom));
+  }
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .heading-text {
+    min-width: 0;
+  }
+  .french-flag {
+    width: 30px;
+    height: 20px;
+    flex-shrink: 0;
+    background: linear-gradient(
+      to right,
+      #000091 0 33.333%,
+      #fff 33.333% 66.667%,
+      #e1000f 66.667% 100%
+    );
+    box-shadow: 0 0 0 1px #00000012;
+  }
+  .updated {
+    color: var(--date);
+    margin: 0;
+    margin-left: 8px;
+    text-align: right;
+    line-height: 1.7;
+  }
+  .updated time {
+    display: block;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .overview {
+    min-width: 0;
+  }
+  .scale-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  .scale-labels span:last-child {
+    text-align: right;
+  }
+  .democracy-meter {
+    position: relative;
+    height: 7px;
+    border-radius: 4px;
+    background: #d7e1e9;
+    overflow: hidden;
+  }
+  .democracy-meter::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 50%;
+    width: 1px;
+    background: #fff;
+  }
+  .democracy-meter > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--orange);
+  }
+  .active {
+    --status-color: var(--green);
+  }
+  .unstable {
+    --status-color: var(--orange);
+  }
+  .inactive {
+    --status-color: var(--black);
+  }
+  .dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--status-color);
+    flex-shrink: 0;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 20px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 20px auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--surface);
+    box-shadow: 0 3px 14px #092b4926;
+    list-style: none;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dashboard {
+    display: grid;
+    grid-template-columns: minmax(300px, 42%) minmax(0, 1fr);
+    gap: 36px;
+    align-items: start;
+  }
+  .criteria-nav {
+    display: grid;
+    gap: 8px;
+  }
+  .criterion-tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 68px;
+    padding: 16px;
+    border: 0;
+    border-left: 3px solid transparent;
+    border-radius: 12px;
+    background: var(--surface);
+    color: #3e5366;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #092b4914;
+  }
+  .criterion-tab:hover {
+    background: var(--hover);
+  }
+  .criterion-tab[aria-selected="true"] {
+    border-left-color: var(--accent);
+    background: var(--selected);
+    color: #1c4464;
+    font-weight: 600;
+    box-shadow: 0 4px 16px #092b4933;
+  }
+  .criterion-tab[aria-selected="true"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid var(--selected);
+    transform: translateY(-50%);
+  }
+  .criterion-title {
+    min-width: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  .group-distribution {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .group-distribution .dot {
+    width: 9px;
+    height: 9px;
+  }
+  .criteria-content,
+  .group {
+    min-width: 0;
+  }
+  .group-heading {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 68px 20px 16px;
+    background: var(--surface);
+    border-radius: 22px 0 0 0;
+  }
+  .group-heading::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -44px;
+    width: 154px;
+    height: 48px;
+    transform: rotate(45deg);
+    background: linear-gradient(
+      to top,
+      #000091 0 33.333%,
+      #fff 33.333% 66.667%,
+      #e1000f 66.667% 100%
+    );
+    pointer-events: none;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .rows {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .indicator + .indicator {
+    border-top: 1px solid var(--line);
+  }
+  summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px 10px;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    min-height: 56px;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:hover {
+    background: var(--hover);
+  }
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3e5366;
+    overflow-wrap: anywhere;
+  }
+  .chevron {
+    height: 7px;
+    width: 7px;
+    border-right: 1px solid #637b91;
+    border-bottom: 1px solid #637b91;
+    transform: rotate(45deg);
+    justify-self: center;
+    transition: transform 150ms ease;
+  }
+  details[open] .chevron {
+    transform: rotate(225deg);
+  }
+  details[open] summary {
+    background: var(--hover);
+  }
+  details[open] .description {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .comment {
+    padding: 0 12px 16px;
+    background: var(--hover);
+  }
+  .comment p {
+    border-left: 2px solid #9ebbd1;
+    padding-left: 12px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+  }
+  .page-footer {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    background-color: transparent;
+    box-shadow: 0 -3px 16px #294d6b0a;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+  }
+  .page-footer span span {
+    margin: 0 5px;
+    color: #8496a6;
+  }
+  .status {
+    color: var(--status-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: right;
+    white-space: nowrap;
+  }
+  @media (max-width: 850px) {
+    .topbar-inner {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px 16px;
+    }
+    .overview {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+    .dashboard {
+      grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+      gap: 28px;
+    }
+  }
+  @media (max-width: 680px) {
+    .topbar-inner {
+      padding-inline: 12px;
+      gap: 8px 10px;
+    }
+    main {
+      padding: 16px 12px calc(96px + env(safe-area-inset-bottom));
+    }
+    h1 {
+      font-size: 20px;
+    }
+    .dashboard {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+    }
+    .criterion-tab[aria-selected="true"]::after {
+      top: auto;
+      right: 20px;
+      bottom: -10px;
+      border-top: 10px solid var(--selected);
+      border-right: 10px solid transparent;
+      border-bottom: 0;
+      border-left: 10px solid transparent;
+      transform: none;
+    }
+    h2 {
+      font-size: 26px;
+    }
+    .page-footer {
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      padding-inline: 12px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .chevron {
+      transition: none;
+    }
+  }
+</style>

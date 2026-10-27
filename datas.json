@@ -1,0 +1,280 @@
+{
+  "pays": "France",
+  "derniere_mise_a_jour": "2026-10-25",
+  "criteres": [
+    {
+      "id": "elections",
+      "titre": "Souveraineté du peuple & élections libres",
+      "sous_criteres": [
+        {
+          "description": "Élections tenues aux échéances constitutionnelles prévues",
+          "statut": "Actif",
+          "comment": "Municipales des 15 et 22 mars 2026 tenues au calendrier normal, avec trois réformes du scrutin entrées en vigueur (liste paritaire étendue aux communes <1000 hab., réforme PLM, vote des détenus). Présidentielle 2027 programmée pour le 18 avril 2027, recueil des parrainages clos le 12 mars 2027. Malgré l'instabilité gouvernementale (4 Premiers ministres en un an, budget 2026 adopté via 49.3), aucun report ni contournement du calendrier électoral. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Pluralisme effectif avec au moins deux alternatives réelles",
+          "statut": "Actif",
+          "comment": "Paysage partisan fragmenté mais très compétitif : aux municipales 2026, listes de droite, de gauche, du RN, du centre et candidates divers ont été élues ou qualifiées au second tour. Pour la présidentielle 2027, plusieurs forces (RN, LFI, PS, LR, macronisme) disposent de bases électorales réelles. Aucun parti unique ni coalition hégémonique ne verrouille l'accès au pouvoir."
+        },
+        {
+          "description": "Secret du vote et intégrité du dépouillement garantis",
+          "statut": "Actif",
+          "comment": "Aucune contestation systémique de l'intégrité du scrutin signalée aux municipales 2026 ; les résultats sont publiés bureau par bureau sous licence ouverte, avec les recours contentieux usuels devant le tribunal administratif. Point de vigilance : dématérialisation des parrainages présidentiels effective pour 2027, que le Conseil constitutionnel a demandé d'encadrer avec « précaution » compte tenu des risques de fraude informatique. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Alternance effective observée dans l'histoire récente",
+          "statut": "Actif",
+          "comment": "Alternances présidentielles observées en 2012 et 2017 (changement de majorité), et forte volatilité électorale confirmée depuis 2024 : dissolution, recomposition des alliances, chute de gouvernements par motion de censure (Barnier en 2024, Bayrou en 2025). Le pouvoir change effectivement de mains par les urnes ; l'instabilité institutionnelle actuelle traduit au contraire une Assemblée sans majorité verrouillée."
+        },
+        {
+          "description": "Accès équitable au scrutin (parrainages, dépôt de candidatures)",
+          "statut": "Instable",
+          "comment": "Le filtre des 500 présentations d'élus est au cœur d'une contestation ouverte à un an de la présidentielle : Jean-Luc Mélenchon ne disposerait que de 200 à 250 promesses de parrainages, LFI réclame une réforme intégrant les soutiens citoyens, et le débat sur l'anonymat des signataires resurgit (Le Pen, Mélenchon, Zemmour en 2022 dénonçant des pressions sur les maires). Le système en place n'empêche pas l'accès des petites formations disposant de réseaux d'élus, mais le mécanisme est en cours de remise en question publique — à surveiller jusqu'à la validation des candidatures par le Conseil constitutionnel. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "separation_pouvoirs",
+      "titre": "Séparation des pouvoirs & équilibres",
+      "sous_criteres": [
+        {
+          "description": "Le Parlement légifère réellement (amendements, débats)",
+          "statut": "Actif",
+          "comment": "L'Assemblée nationale reste un lieu réel de production législative : session 2025-2026 marquée par 147 jours de séance, 72 textes définitivement adoptés, environ 38 455 amendements déposés en séance publique (près de 3 000 adoptés) et 16 propositions de loi d'origine parlementaire adoptées. Les motions de censure fonctionnent (chute de Barnier en 2024 et de Bayrou en 2025). Nuance : recours fréquent à la procédure accélérée (37 projets de loi concernés sur la session), qui réduit le temps d'examen. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Usage encadré des procédures exceptionnelles (49.3, ordonnances, décrets-lois)",
+          "statut": "Instable",
+          "comment": "Légalement encadré (limitation aux textes budgétaires + 1 texte par session depuis 2008), mais l'usage est devenu un mode de gouvernement : le budget 2026 a été adopté par 49.3 à plusieurs reprises (premier recours le 20 janvier 2026, 118e usage sous la Ve République), après que Lecornu avait publiquement exclu le « passage en force » — soit deux budgets consécutifs adoptés sans vote des députés (Barnier en 2024, tombé pour cette raison ; Bayrou en 2025 ; Lecornu en 2026). Le contrepoids démocratique (motion de censure) fonctionne, mais la production budgétaire échappe désormais régulièrement au vote de l'Assemblée : statut en tension, à surveiller à chaque loi de finances."
+        },
+        {
+          "description": "Justice et législature ne sont pas des instruments de l'exécutif",
+          "statut": "Instable",
+          "comment": "Les institutions n'ont pas cédé, mais la pression politique sur la justice est documentée : le Conseil supérieur de la magistrature a publié trois communiqués en 2025 pour défendre l'indépendance des magistrats (après le jugement sur les assistants parlementaires du FN, les attaques contre le juge Nicolas Guillou, et la décision sur le financement libyen de Sarkozy) et déplore dans son rapport annuel « un véritable mépris de l'autorité judiciaire et des magistrats » de la part de responsables politiques. Signes d'attaques récurrentes, sans soumission constatée de la justice : état instable, pas d'atteinte installée. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Les collectivités locales gardent une autonomie réelle",
+          "statut": "Instable",
+          "comment": "L'autonomie des collectivités n'est pas remise en cause (compétences, élus locaux, ressources intactes), mais elle est en cours de reconfiguration : rapport annuel du Conseil d'État 2026 consacré à la décentralisation (25 propositions), réforme territoriale annoncée par le Premier ministre et « méga-décret » du 27 juillet 2026 de simplification des normes applicables aux collectivités. Le chantier est ouvert à l'approche de la présidentielle : contenu exact et garanties de libre administration à surveiller. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "etat_de_droit",
+      "titre": "État de droit",
+      "sous_criteres": [
+        {
+          "description": "Contrôle de constitutionnalité effectif et respecté par le pouvoir",
+          "statut": "Actif",
+          "comment": "Le contrôle fonctionne à plein régime et l'exécutif s'y soumet : la loi immigration du 26 janvier 2024 avait été partiellement censurée en 2024, et le Conseil constitutionnel a continué en 2026 d'examiner ses dispositions via QPC (décisions des 30 avril et 22 octobre 2026, avec réserves d'interprétation), le Premier ministre déposant ses observations et les conclusions étant publiées au JO. Le mécanisme de la QPC (art. 61-1) reste un recours effectif pour tout justiciable. Aucun épisode de déni des décisions du Conseil signalé. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Décisions de justice exécutées, y compris contre l'État",
+          "statut": "Actif",
+          "comment": "Les voies d'exécution contre l'État sont réelles et renforcées : le Conseil d'État a jugé le 22 octobre 2026 que le juge de l'exécution peut majorer pour l'avenir une astreinte prononcée contre l'État pour forcer l'exécution d'une injonction. Vigilance toutefois : l'affaire soumise illustre des lenteurs réelles de l'État (injonction de 2022 toujours pas exécutée, astreinte courant depuis). Le mécanisme sanctionne ces défaillances, mais leur récurrence administrative mérite un suivi. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Non-rétroactivité des lois pénales et sécurité juridique",
+          "statut": "Actif",
+          "comment": "Aucune loi pénale rétroactive adoptée en 2025-2026 ; les condamnations de la France sont versées et le principe de légalité des délits et des peines demeure intouché. En revanche, l'insécurité normative reste un point de tension récurrent : le bilan annuel du Sénat sur l'application des lois (31 mars 2026) pointe des taux d'application en baisse et des délais constants, et la cascade de réformes sur l'immigration et l'asile (loi 2024, décret de juin 2026, transposition par ordonnances du Pacte européen) impose des changements de règles fréquents aux administrés. Atteinte à la prévisibilité, pas au principe de non-rétroactivité. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Égalité devant la loi, pas de catégorie de citoyens au-dessus des règles",
+          "statut": "Actif",
+          "comment": "Le principe résiste à l'épreuve des faits : un ancien président de la République a été condamné (financement libyen, décision de septembre 2025 du tribunal judiciaire de Paris, suivie d'appel), et même les décrets présidentiels de révocation sont attaquables devant le juge (Conseil d'État, 5 février 2026). Exception constitutionnelle connue : l'article 67 de la Constitution empêche toute poursuite contre le président en exercice — une immunité fonctionnelle, débattue mais stable, qui distingue le chef de l'État sortant (justiciable, comme Sarkozy l'a confirmé) du président en poste. Aucune catégorie de citoyens juridiquement au-dessus des règles signalée. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "justice",
+      "titre": "Indépendance de la justice",
+      "sous_criteres": [
+        {
+          "description": "Procédure de nomination des magistrats indépendante du pouvoir",
+          "statut": "Instable",
+          "comment": "Le cadre est protecteur pour le siège (avis conforme du CSM, procédure dite de « transparence », 2 753 avis rendus en 2025, réforme statutaire en vigueur le 1er décembre 2025), mais une tension documentée persiste : le Conseil d'État a été saisi début 2026 de recours de vice-présidents dont la candidature avait été écartée par le garde des sceaux au profit d'un autre nom dans la liste transmise au CSM — le rapporteur public posant la question de l'impartialité ministérielle dans les choix de nomination. Le choix final appartient donc partiellement au pouvoir exécutif, sous contrôle juridictionnel : système en tension, pas de soumission installée. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Aucune sanction ou déplacement d'un juge lié à ses décisions",
+          "statut": "Instable",
+          "comment": "Aucune révocation ou sanction disciplinaire d'un magistrat pour une décision rendue n'a été prononcée en 2025-2026. En revanche, la doctrine et la presse judiciaires rapportent des annonces publiques de sanctions individuelles contre des magistrats du parquet par le garde des sceaux sans attendre l'issue des procédures disciplinaires — et le CSM a dû intervenir trois fois en 2025 pour rappeler que la critique d'une décision ne doit pas porter atteinte à l'indépendance (affaire des assistants parlementaires du FN, attaques contre le juge Nicolas Guillou après le mandat d'arrêt de la CPI, décision Sarkozy-financement libyen). Pressions documentées, sanctions inexistantes : état instable, à surveiller. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Financement et moyens suffisants des juridictions",
+          "statut": "Instable",
+          "comment": "Trajectoire de renforcement en cours mais sous-dotation persistante. Le budget 2026 monte à environ 13,06 milliards d'euros (+3 %), avec 660 emplois renforcés (dont le parquet national anticriminalité organisée au 1er janvier 2026) et la poursuite du plan de 1 500 magistrats et 1 800 greffiers d'ici 2027 (LOPJ 2023-2027). Mais le Sénat documente en 2025 des annulations de crédits (décret du 25 avril) suivies d'un gel, qui « ont rendu plus difficile le fonctionnement de la justice », et rappelle que la dépense judiciaire française reste inférieure à la moyenne européenne par habitant (CEPEJ). Les moyens progressent sans combler le retard : instable, en cours de changement. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "libertes",
+      "titre": "Libertés fondamentales",
+      "sous_criteres": [
+        {
+          "description": "Pas de censure ni de pression étatique sur l'expression",
+          "statut": "Instable",
+          "comment": "Aucune censure préalable généralisée ni régime de contrôle de la presse, et la réforme de la définition pénale du viol incluant le consentement (octobre 2025) illustre une capacité législative conforme aux normes internationales. Mais des pressions étatiques ciblées sont documentées par Amnesty pour 2025 : criminalisation des actions de désobéissance civile climatique (A69), interdictions de conférences et d'événements publics sur la Palestine, restriction des expressions de solidarité avec les Palestiniens, et usage accru de la vidéosurveillance par IA suscitant des vives inquiétudes. L'expression n'est pas censurée dans l'absolu, mais certaines causes subissent des restrictions disproportionnées. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Droit de manifester pacifiquement sans interdiction généralisée",
+          "statut": "Inactif",
+          "comment": "Le seuil est franchi en octobre 2026 : après la manifestation massive du 17 octobre, le président de la République a déclaré que « la recommandation générale, c'est qu'il n'y ait pas de manifestations dans les jours à venir » ; des interdictions s'enchaînent dans plusieurs villes pour la mobilisation du 24 octobre, un couvre-feu partiel est maintenu à Paris et l'armée est déployée « en renfort » des forces de l'ordre (Amnesty, 23 oct. 2026). Le rapport FIDH/OMCT de septembre 2025 (« France : démocratie en décrochage ») documentait déjà des entraves aux libertés de réunion et de manifester, et l'ONU (CAT, mai 2025) a alerté sur les armes mutilantes utilisées en manifestation — la France étant le seul pays d'Europe dans ce cas. Le droit existe en théorie mais est actuellement suspendu de facto dans plusieurs villes : à réévaluer au sort de la mobilisation et aux recours juridictionnels en cours. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Liberté syndicale et associative effective",
+          "statut": "Instable",
+          "comment": "Les syndicats demeurent légaux, actifs et parties prenantes des mobilisations sociales de l'automne 2026 (la manifestation du 17 octobre a eu lieu). Côté associatif, en revanche, la FIDH et l'OMCT consacrent un rapport entier (sept. 2025) aux « entraves à l'exercice des libertés associatives » en France, et Amnesty recense pour 2025 la menace de dissolution du collectif Urgence Palestine, des restrictions visant les défenseurs du climat et les associations de soutien aux exilés. Le droit d'association n'est pas aboli, mais l'espace civique est documenté comme rétréci : état instable, à surveiller au fil des procédures de dissolution et des contentieux. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Minorités protégées, pas de criminalisation de l'opposition",
+          "statut": "Instable",
+          "comment": "L'opposition politique n'est pas criminalisée : partis, élus et syndicats agissent librement et se présentent à toutes les élections (municipales 2026, présidentielle 2027 en préparation). Mais la protection des minorités est en tension documentée : Amnesty note dans son rapport 2025/26 la multiplication de propositions de lois visant directement les femmes musulmanes porteuses du voile, une « parole raciste décomplexée » de responsables politiques et de figures médiatiques, et la hausse des actes antisémites et antimusulmans, dans un contexte de racisme systémique nié par l'État. Le pacte républicain tient, mais des minorités précises sont devenues la cible de propositions législatives restrictives : instable. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "presse",
+      "titre": "Presse & information plurielles",
+      "sous_criteres": [
+        {
+          "description": "Pluralisme de la propriété des médias, pas de concentration étatique",
+          "statut": "Actif",
+          "comment": "L'État ne contrôle aucun média d'information généraliste : le paysage demeure privé, concurrentiel et politiquement plural (presse de droite, de gauche, en ligne, publique indépendante éditorialement via France Télévisions/Radio France sous contrôle d'Arcom et du Parlement). Le classement RSF 2026 place la France 25e sur 180 (score 76,68), stable d'une année sur l'autre. La concentration médiatique est un vrai débat public (groupe Bolloré notamment), mais elle relève d'acteurs privés et non d'une mainmise étatique. Vigilance : les aides publiques à la presse restent un levier d'influence potentiel, sans ingérence documentée à ce jour. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Protection des sources et sécurité des journalistes",
+          "statut": "Instable",
+          "comment": "La loi de 2010 sur la protection des sources est en crise documentée : en décembre 2025, RSF et 131 organisations (dont LDH, SAF, Anticor) ont appelé le gouvernement à agir d'urgence, recensant au moins 27 journalistes convoqués ou placés en garde à vue par la DGSI (décompte Télérama), l'arrestation du journaliste Enzo Rabouy le 1er juillet 2025 quinze jours après sa couverture d'une action militante au Salon du Bourget, les poursuites contre Ariane Lavrilleux (Mediterranée, bateaux SOS), et la condamnation de la France en 2023 pour l'arrestation illégale d'un journaliste. La réforme demandée depuis un an n'est pas intervenue et RSF parle d'intimidations ayant « franchi un cran ». Le cadre légal existe mais les pratiques le contournent : sérieusement endommagé, instable. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Pas de désinformation organisée par l'État",
+          "statut": "Actif",
+          "comment": "Aucune campagne de désinformation organisée par les autorités françaises identifiée en 2025-2026. L'effort public est orienté vers la défense : première Stratégie nationale de lutte contre les manipulations de l'information d'origine étrangère (février 2026, SGDSN), appui au service VIGINUM de détection des ingérences, communication officielle identifiable via le domaine gouv.fr. Le sujet à surveiller n'est pas la propagande d'État mais l'orientation de la communication officielle en période de tension sociale (automne 2026) et la frontière entre lutte contre la désinformation et régulation de l'expression légitime. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Accès à Internet non filtré",
+          "statut": "Actif",
+          "comment": "Pas de filtrage ni de blocage généralisé d'Internet en France : les blocages de sites sont limités à des contenus illégaux précis (terrorisme, pédocriminalité, jeux illégaux) prononcés par décision administrative ou judiciaire avec voies de recours. Aucune mesure de type « kill switch » ou coupure nationale de l'accès (l'accès n'a pas été coupé lors des émeutes de 2023 ni pendant la crise d'octobre 2026, où seul un couvre-feu physique a été instauré). Point de vigilance : les débats européens et français sur la régulation des plateformes (retrait de contenus sous 24h) pourraient à terme créer une pression au retrait rapide, à encadrer. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "controle_citoyen",
+      "titre": "Contrôle citoyen, transparence & intégrité",
+      "sous_criteres": [
+        {
+          "description": "Accès aux documents administratifs effectif",
+          "statut": "Instable",
+          "comment": "Le droit existe et le juge le fait respecter (Conseil d'État, 28 octobre 2025 : communication forcée de 81 rapports d'inspection à la demande de la CADA), et la CADA demeure active (rapport d'activité 2025, chiffres publiés, avis contraignants pour l'administration). Mais son rapport 2025 met en lumière des tensions croissantes : extension de la « réserve liée à la sécurité » comme motif de refus de communication, tension récurrente entre transparence et charge de travail des administrations, et contentieux de plus en plus nombreux sur la frontière document administratif / document juridictionnel. Le mécanisme fonctionne, mais le périmètre de ce qui est communicable est contesté de plus en plus souvent : instable. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Lobbyisme déclaré et conflits d'intérêts contrôlés",
+          "statut": "Actif",
+          "comment": "Le dispositif Sapin II fonctionne : environ 3 704 organisations actives sont inscrites au répertoire des représentants d'intérêts tenu par la HATVP, qui publie son bilan 2025 (oct. 2026), contrôle a posteriori par échantillon (agendas, comptes) et dispose de mises en demeure et de sanctions pénales (1 an d'emprisonnement, 15 000 € d'amende). La transparence s'étend : nouveau registre des activités d'influence pour le compte d'un mandant étranger (2024), développement du lobbying local (842 déclarants auprès des collectivités), et bilan raisonné « douze ans » de la HATVP (2026) formulé avec des propositions de renforcement. Limites à surveiller : contrôle partiel (échantillonnage), périmètres d'exemption, et pas de pouvoir de sanction propre direct au-delà de la mise en demeure. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Protection des lanceurs d'alerte",
+          "statut": "Instable",
+          "comment": "Le cadre légal est l'un des plus protecteurs d'Europe depuis la loi du 21 mars 2022 (Waserman-Cadiet : canaux internes/externes, Maison des lanceurs d'alerte, protection étendue à l'amont), et l'écosystème est actif — la Maison des lanceurs d'alerte et les plateformes Alertes.me figurent parmi les 131 organisations co-signataires de l'appel RSF de décembre 2025. Mais l'application demeure fragile : les procédures pénales contre les journalistes qui relaient les alertes (affaires Rabouy, Lavrilleux) et la charge pesant sur les alerteurs en contentieux montrent que la protection sur le terrain est inégale. Cadre solide, pratiques défaillantes : instable. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Corruption poursuivie indépendamment du rang des personnes",
+          "statut": "Actif",
+          "comment": "La preuve par les faits : le parquet national financier a requis le 28 septembre 2026 quatre ans de prison et l'inéligibilité immédiate contre l'ex-garde des sceaux Rachida Dati (affaire Ghosn), qualifiant les faits d'« atteinte manifeste à la démocratie » ; un ex-président de la République (Sarkozy, financement libyen) a été condamné en première instance en 2025 ; l'ex-PDG Carlos Ghosn est jugé par contumace. Le PNF, créé en 2014, poursuit sans distinction de rang et de bord politique, et la CSM a publiquement défendu les magistrats face aux contestations politiques de ces poursuites (assistants parlementaires FN, Sarkozy). Aucun signe d'immunité de fait pour les personnes puissantes ne ressort des procédures récentes. [Vérifié le 2026-10-25]"
+        }
+      ]
+    },
+    {
+      "id": "minorites",
+      "titre": "Protection des minorités & droits humains",
+      "sous_criteres": [
+        {
+          "description": "Droits des minorités ethniques, religieuses et linguistiques respectés",
+          "statut": "Instable",
+          "comment": "La protection juridique existe (délits aggravés, HALD, délégué interministériel nommé en 2025, cadre universaliste revendiqué), mais les faits dégradent : la CNCDH recense 9 737 crimes et délits à caractère raciste, xénophobe ou antireligieux en 2025 (+5 % après +11 % en 2024), 2 489 actes antireligieux et 3 851 actes racistes ou antisémites en milieu scolaire ; elle alerte sur le « désengagement des pouvoirs publics » dans le plan national de lutte (PRADO) tout en saluant la résilience des opinions tolérantes, historiquement élevées. Amnesty documente en parallèle une « parole raciste décomplexée » de responsables politiques et des propositions de lois ciblant les femmes musulmanes voilées. Aucune minorité n'est légalement privée de droits, mais leur protection effective recule : instable. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Droit d'asile et droits des étrangers conformes aux engagements internationaux",
+          "statut": "Instable",
+          "comment": "Le cadre demeure un vrai droit d'asile (OFPRA, CNDA, aide juridictionnelle, contentieux effectif) et la transposition du Pacte européen est encadrée par le droit UE. Mais la trajectoire est restrictive et précipitée : loi immigration de janvier 2024 partiellement censurée par le Conseil constitutionnel, décret du 6 juin 2026 adaptant plus de 40 % du CESEDA au Pacte européen avec une application effective dès le 12 juin 2026 — le Syndicat des avocats de France dénonçant la « procrastination » puis la précipitation, sans concertation des acteurs ; Amnesty relève par ailleurs la suspension en août 2025 de l'accueil des Palestiniens fuyant Gaza et l'exploitation persistante des travailleurs migrants racisés. Conformité formelle, dégradation substantielle : instable. [Vérifié le 2026-10-25]"
+        },
+        {
+          "description": "Pas de discours officiel désignant un « ennemi intérieur »",
+          "statut": "Instable",
+          "comment": "Aucune désignation officielle d'un « ennemi intérieur » par les institutions de l'État — la Constitution garantit l'indivisibilité de la République et aucun groupe n'est juridiquement déclaré hostile. Mais la frontière est grignotée par le débat public : Amnesty 2025/26 décrit une « parole raciste décomplexée » désormais courante parmi des responsables politiques, des propositions de lois ciblant des populations précises (femmes musulmanes voilées, étrangers), et une rhétorique xénophobe « banalisée » à un an de la présidentielle ; la CNCDH souligne le rôle des discours publics dans la persistance des actes de haine. Le seuil de la désignation officielle d'un ennemi intérieur n'est pas franchi, mais la dérive rhétorique est documentée et suivie par les institutions de défense des droits : instable, à surveiller de près pendant la campagne 2027. [Vérifié le 2026-10-25]"
+        }
+      ]
+    }
+  ],
+  "criteres_vigilance": [
+    {
+      "id": "autoritarisme",
+      "titre": "Signaux autoritaraires",
+      "logique_inverse": true,
+      "sous_criteres": [
+        {
+          "description": "Concentration du pouvoir exécutif au détriment des contrepouvoirs",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Discours délégitimant les institutions (justice, presse, opposition)",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Restriction légale de la contestation",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Surveillance de masse sans contrôle effectif",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Instrumentalisation de l'appareil d'État contre des opposants",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Érosion des corps intermédiaires (syndicats, associations, universités)",
+          "statut": true,
+          "comment": ""
+        }
+      ]
+    },
+    {
+      "id": "fascisme",
+      "titre": "Signaux fascistes",
+      "logique_inverse": true,
+      "sous_criteres": [
+        {
+          "description": "Présence ou influence institutionnelle de mouvements néo-fascistes",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Violence politique ciblée contre élus, journalistes ou minorités",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Réhabilitation publique de régimes ou figures fascistes",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Milices ou groupes armés hors contrôle de l'État",
+          "statut": true,
+          "comment": ""
+        },
+        {
+          "description": "Mise au pas des corps intermédiaires (syndicats, presse, justice)",
+          "statut": true,
+          "comment": ""
+        }
+      ]
+    }
+  ]
+}
